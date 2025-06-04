@@ -1,0 +1,1 @@
+select name from districts join expenditures on district_id = districts.id order by pupils limit 1;

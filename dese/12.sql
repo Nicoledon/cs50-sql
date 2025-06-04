@@ -1,0 +1,3 @@
+SELECT name ,per_pupil_expenditure,exemplary  from districts JOIN expenditures on expenditures.district_id = districts.id join staff_evaluations  on staff_evaluations.district_id = districts.id 
+ where 
+ per_pupil_expenditure > (select AVG(per_pupil_expenditure) from expenditures  ) and exemplary  > (SELECT AVG(exemplary)  from staff_evaluations) ORDER BY  exemplary DESC ,per_pupil_expenditure DESC ;

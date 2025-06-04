@@ -1,0 +1,1 @@
+SELECT first_name ,last_name from players where players.id = (SELECT player_id from salaries order by salary DESC LIMIT 1);

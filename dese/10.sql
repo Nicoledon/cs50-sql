@@ -1,0 +1,1 @@
+select name , per_pupil_expenditure from districts join expenditures  on district_id = districts.id where name NOT LIKE '%School%'order by per_pupil_expenditure DESC LIMIT 10;

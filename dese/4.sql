@@ -1,0 +1,1 @@
+SELECT count(city),city FROM (select city from schools  where type LIKE "%public%" )GROUP BY city ORDER BY count(city) DESC ,ORDER BY name Limit 10 ;

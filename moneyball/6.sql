@@ -1,0 +1,1 @@
+SELECT teams.name ,"total hits"  from (SELECT team_id,SUM("2B" + "3B" + "HR") AS 'total hits' FROM (SELECT * from performances where year = 2001) GROUP BY team_id) as sala join teams on teams.id = sala.team_id ;

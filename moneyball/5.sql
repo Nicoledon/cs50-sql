@@ -1,0 +1,1 @@
+SELECT DISTINCT(name) from teams join performances on teams.id = performances.team_id where player_id = (SELECT id from players where first_name LIKE '%Satchel%' and last_name LIKE '%Paige%');
